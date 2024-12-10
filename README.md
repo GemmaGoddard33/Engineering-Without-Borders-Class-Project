@@ -37,7 +37,7 @@ Must be in `frontend` directory
 
 ## _Execute Code_
 
-Run the following code in Powershell if using windows or the terminal using Linux/Mac
+Run the following code in Powershell if using Windows or the terminal using Linux/Mac
 
 `cd border-502-project`
 
@@ -53,7 +53,7 @@ Run the backend API
 
 `rails s -b=0.0.0.0`
 
-In another window, run the following code in Powershell if using windows or the terminal using Linux/Mac
+In another window, run the following code in Powershell if using Windows or the terminal using Linux/Mac
 
 `cd border-502-project`
 
@@ -82,7 +82,7 @@ Navigate to the `frontend` directory and create a `.env.local` file with the fol
 
 `AUTH_GOOGLE_SECRET="YOUR_GOOGLE_OAUTH_CLIENT_SECRET_HERE"`
 
-The frontend needs another environment variable which can be added to the same `.env.local` file. Add the following line to the file
+The front end needs another environment variable that can be added to the same `.env.local` file. Add the following line to the file
 
 `NEXTAUTH_URL=http://localhost:3001`
 
@@ -98,9 +98,9 @@ The backend needs 2 more environment variables which can be added to the `.env.l
 
 Setup a Heroku account: https://signup.heroku.com/
 
-Two pipelines will be needed. One for the backend and one for the frontend. The backend pipeline will be created first.
+Two pipelines will be needed. One for the backend and one for the front end. The backend pipeline will be created first.
 
-From the heroku dashboard select `New` -> `Create New Pipline`
+From the Heroku dashboard select `New` -> `Create New Pipline`
 
 Name the pipeline, and link the respective git repo to the pipeline
 
@@ -108,13 +108,13 @@ Select `Enable Review Apps`
 
 Click `New app` under review apps, and link your test branch from your repo
 
-Once the app is created, click on it and go to `manage add-ons`. Search for `Heroku Postgres` and add it. Navigate to the settings and select `Add buildbpack` in `Buildbpacks`. Add the `https://github.com/timanovsky/subdir-heroku-buildpack` buildpack.
+Once the app is created, click on it and go to `manage add-ons`. Search for `Heroku Postgres` and add it. Navigate to the settings and select `Add buildbpack` in `Buildbpacks`. Add the `https://github.com/timanovsky/subdir-heroku-buildpack` build pack.
 
 Repeat the same steps for the frontend pipeline, but don't add the `Heroku Postgres` add-on.
 
 Under staging app, select `Create new app` and link your main branch from your repo. Do this for both pipelines.
 
-Config Vars can be set in `Settings` -> `Config Vars` -> `Reveal config vars`. Both the frontend and backend need the `PROJECT_PATH` variable which is set to the directory where the app is hosted, so either backend or frontend. The rest of the environment varaibles for the respective applications can be set like we did with the `.env.local` files. The environment variables with URLs must be changed to match their new URLs.
+Config Vars can be set in `Settings` -> `Config Vars` -> `Reveal config vars`. Both the frontend and backend need the `PROJECT_PATH` variable which is set to the directory where the app is hosted, so either backend or frontend. The rest of the environment variables for the respective applications can be set like we did with the `.env.local` files. The environment variables with URLs must be changed to match their new URLs.
 
 You can select `Open app` in the pipeline dashboard once the apps are built.
 
@@ -124,13 +124,13 @@ Now the app will be in production
 
 ## _CI/CD_
 
-For continuous development, we set up Heroku to automatically deploy our apps when their respective github branches are updated.
+For continuous development, we set up Heroku to automatically deploy our apps when their respective GitHub branches are updated.
 
 `Review app: test branch`
 
 `Production app: main branch`
 
-For continuous integration, we set up a Github action to run our specs, security checks, linter, etc. after every push or pull-request. This allows us to automatically ensure that our code is working as intended.
+For continuous integration, we set up a Github action to run our specs, security checks, linter, etc. after every push or pull request. This allows us to automatically ensure that our code is working as intended.
 
 ## _Support_
 
