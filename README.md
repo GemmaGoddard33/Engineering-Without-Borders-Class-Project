@@ -2,7 +2,7 @@
 
 ## _About_
 
-An application designed for Engineers Without Borders (EWB) to highlight its mission and allow officers to easily track it's users information. This app provides an interactive platform to showcase EWB's projects, track their progress, and allow users to easily store and update user information. This repository contains the source code, documentation, and development resources for the EWB app.
+This repository is dedicated to the Engineers Without Borders (EWB) app, created as part of a class project in collaboration with a team of peers. The app supports EWB's mission by providing a comprehensive platform for project management and user information tracking. It allows users to interactively showcase EWB's projects, monitor their progress, and streamline the storage and updating of user data. This repository contains the source code, documentation, and development resources that reflect our team's effort and collaboration during the project's development.
 
 ## _Requirements_
 
@@ -20,12 +20,6 @@ This code has been run and tested on:
 - **Docker:** Download latest version at https://www.docker.com/products/docker-desktop
 - **Heroku CLI:** Download latest version at https://devcenter.heroku.com/articles/heroku-cli
 - **Git:** Downloat latest version at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-
-## _Installation_
-
-Dowload this code repository by using git:
-
-`git clone https://github.com/tysanders-tamu/border-502-project.git`
 
 ## _Tests_
 
